@@ -20,17 +20,18 @@ have learned so far.
 """
 
 names = []
-
-for i in range(100):
-    x = input("Pleasee enter your first and last name> ")
+y = 0
+for i in range(10000):
+    x = input("Please enter your first and last name> ")
     if x in names:
         print("That name is already on the list")
+        y = y - 1
     elif x == "":
-        i = i - 1
-        print(f"There are {i} names on the list")
+        print(f"There are {y} names on the list")
     else:
         names.append(x)
     if x == "":
         names.sort()
         print(names)
         break
+    y = y + 1
